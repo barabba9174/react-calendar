@@ -1,31 +1,74 @@
-# Boilerplate for creating React Npm packages with ES2015
+# React Calendar component with ES2015
 
-The package is based on [npm-base](https://github.com/kadirahq/npm-base) package by [Kadira](https://github.com/kadirahq) which is really great when you want to prepare Npm package. This one is prepared to be used as a starter point for React components which needs to be published on Npm.
 
-It includes linting with [ESLint](http://eslint.org/) and testing with [Mocha](https://mochajs.org/), [Enzyme](http://airbnb.io/enzyme/) and [JSDOM](https://github.com/tmpvar/jsdom).
-
-Also there is of course ES6 transpilation.
 
 ## Usage
 
-1. Clone this repo
-2. Inside cloned repo run `npm install && rm -rf .git && git init` and update `package.json` with your package name.
-3. If you want to run tests: `npm test` or `npm run testonly` or `npm run test-watch`. You need to write tests in `__tests__` folder. You need at least Node 4 on your machine to run tests.
-4. If you want to run linting: `npm test` or `npm run lint`. Fix bugs: `npm run lint-fix`. You can adjust your `.eslintrc` config file.
-5. If you want to run transpilation to ES5 in `dist` folder: `npm run prepublish` (standard npm hook).
+1. `npm install react-calendar`
+2. `import Calendar from 'react-calendar'`
 
-## CSS and preprocessors
+## Parameters (all the parameters are optional)
 
-For more information check out this thread: [#5](https://github.com/juliancwirko/react-npm-boilerplate/issues/5)
+selectedDates: default selected dates (array of numbers, of strings or date objects)
+minDate: minumum date for starting the calendar (number, string or date object)
+maxDate: maximum date for ending the calendar (number, string or date object)
+type: string, type of picking, the default is normal, if it is "range" the datepicker becames a range datepicker
+defaultFocus: default day focus (if it is not in mimunim-maximum range the default is the first date of selectedDates or the minumum date)
+callBack: function for receiving back the selected values (function, argument object)
+hideYears: if it is true, the year navigation arrows are hidden (boolean)
+lineNumbers: if it is setted it changes default rows number of the timepicker, otherwise it's automatic (number)
+locale: locale for the calendar (as moment.js) (string)
+monthFormat: format for the month (as moment.js)  (string)
+weekFormat: format for the week days (as moment.js)  (string)
+longFormat: format for long result (as moment.js)  (string)
+shortFormat: format for short result (as moment.js)  (string)
+rangeSeparator: format for the range separator result (string)
+minRange: minumum allowed range (number)
+maxRange: maximum allowed range (number)
+disable: function for disabling the date (function, argument date)
+labels: label for accessibility (object)
 
-## Blog post about it:
 
-- [Creating React NPM packages with ES2015](http://julian.io/creating-react-npm-packages-with-es2015/)
+## callBack Object
+{
+  "selected": [
+    {
+      "date": "2017-06-04T23:00:00.000Z",
+      "time": 1496617200000,
+      "short": "06-05-2017",
+      "long": "05 June 2017"
+    },
+    {
+      "date": "2017-06-12T23:00:00.000Z",
+      "time": 1497308400000,
+      "short": "06-13-2017",
+      "long": "13 June 2017"
+    }
+  ],
+  "labels": {
+    "long": "05 June 2017 - 13 June 2017",
+    "short": "06-05-2017 - 06-13-2017"
+  }
+}
 
-## Also check out
+## labels for accessibility object
 
-- [React Alert UI component](https://github.com/juliancwirko/react-s-alert)
-- [React project boilerplate with Webpack, HMR, React Router](https://github.com/juliancwirko/react-boilerplate)
+{
+  "title": "Datepicker",
+  "prevMonth": "Previous Month",
+  "nextMonth": "Next Month",
+  "selected": "Selected",
+  "firstSelected": "Start date selected, now select the end date",
+  "description": "Press the arrow keys to navigate by day, PageUp and PageDown to navigate by month, Alt+PageUp and Alt+PageDown to navigate by year, Home and End to jump to the beginning or end of the current week, Escape to cancel or select a date range"
+}
+
+## keyboard navigation features
+Press the arrow keys to navigate by day,
+PageUp and PageDown to navigate by month,
+Alt+PageUp and Alt+PageDown to navigate by year,
+Home and End to jump to the beginning or end of the current week,
+Escape to cancel
+
 
 ## License
 
