@@ -27,7 +27,7 @@
 * **labels**: label for accessibility *(object [2])*  
 
 
-## CallBack object [1]
+## CallBack object [1] sample
 ```
 {
   "selected": [
@@ -50,7 +50,7 @@
   }
 }
 ```
-## Labels for accessibility object [2]
+## Labels for accessibility object [2] sample
 ```
 {
   "title": "Datepicker",
