@@ -30,6 +30,7 @@
 
 
 ## CallBack Object
+```
 {
   "selected": [
     {
@@ -50,9 +51,9 @@
     "short": "06-05-2017 - 06-13-2017"
   }
 }
-
+```
 ## Labels for accessibility object
-
+```
 {
   "title": "Datepicker",
   "prevMonth": "Previous Month",
@@ -61,7 +62,7 @@
   "firstSelected": "Start date selected, now select the end date",
   "description": "Press the arrow keys to navigate by day, PageUp and PageDown to navigate by month, Alt+PageUp and Alt+PageDown to navigate by year, Home and End to jump to the beginning or end of the current week, Escape to cancel or select a date range"
 }
-
+```
 ## keyboard navigation features
 * Press the **arrow keys** to navigate by day,  
 * **PageUp** and **PageDown** to navigate by month,  
