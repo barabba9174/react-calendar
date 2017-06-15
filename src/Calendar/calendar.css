@@ -1,0 +1,219 @@
+.calendarComp {
+  overflow: hidden;
+  position: relative
+
+}
+.calendarComp table {
+  border-collapse: collapse
+
+}
+.calendarComp .hiddenWaiText {
+  position: absolute;
+  top: -2000px
+
+}
+.calendarComp td {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle
+
+}
+.calendarComp td.day {
+  border-bottom: 1px solid #D7D8D6
+
+}
+.calendarComp td.monthYear {
+  font-size: 14px;
+  height: 38px;
+  vertical-align: middle;
+  text-align: center
+
+}
+.calendarComp td.monthYear span {
+  display: inline-block
+
+}
+.calendarComp td.monthYear span.year {
+  padding-left: 5px
+
+}
+.calendarComp th {
+  text-align: center;
+  vertical-align: middle;
+  font-weight: normal;
+  color: rgba(0, 0, 0, .54);
+  line-height: 23px;
+  font-size: 13px
+
+}
+.calendarComp th.weekday {
+  border-bottom: 1px solid #D7D8D6
+
+}
+.calendarComp .prevYear, .calendarComp .prevMonth {
+  text-align: left
+
+}
+.calendarComp .nextYear, .calendarComp .nextMonth {
+  text-align: right
+
+}
+.calendarComp .nextYear, .calendarComp .prevYear, .calendarComp .prevMonth, .calendarComp .nextMonth {}
+.calendarComp .nextYear button, .calendarComp .prevYear button, .calendarComp .prevMonth button, .calendarComp .nextMonth button {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  cursor: pointer;
+  background: transparent
+
+}
+.calendarComp .nextYear button span, .calendarComp .prevYear button span, .calendarComp .prevMonth button span, .calendarComp .nextMonth button span {
+  display: none
+
+}
+.calendarComp .nextYear button:hover:after, .calendarComp .prevYear button:hover:after, .calendarComp .prevMonth button:hover:after, .calendarComp .nextMonth button:hover:after {
+  background: #EDEDED
+
+}
+.calendarComp .nextYear button:focus:after, .calendarComp .prevYear button:focus:after, .calendarComp .prevMonth button:focus:after, .calendarComp .nextMonth button:focus:after {
+  outline: 2px solid  #efbd5b
+
+}
+.calendarComp .nextYear button:after, .calendarComp .prevYear button:after, .calendarComp .prevMonth button:after, .calendarComp .nextMonth button:after {
+  content: '';
+  font-weight: bold;
+  margin: 0 auto;
+  display: block;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  font-size: 22px;
+  color: #AF000D
+
+}
+.calendarComp .nextYear button[aria-disabled=true], .calendarComp .nextYear button:disabled, .calendarComp .prevYear button[aria-disabled=true], .calendarComp .prevYear button:disabled, .calendarComp .prevMonth button[aria-disabled=true], .calendarComp .prevMonth button:disabled, .calendarComp .nextMonth button[aria-disabled=true], .calendarComp .nextMonth button:disabled {
+  cursor: default
+
+}
+.calendarComp .nextYear button[aria-disabled=true]:hover:after, .calendarComp .nextYear button:disabled:hover:after, .calendarComp .prevYear button[aria-disabled=true]:hover:after, .calendarComp .prevYear button:disabled:hover:after, .calendarComp .prevMonth button[aria-disabled=true]:hover:after, .calendarComp .prevMonth button:disabled:hover:after, .calendarComp .nextMonth button[aria-disabled=true]:hover:after, .calendarComp .nextMonth button:disabled:hover:after {
+  background-color: #fff
+
+}
+.calendarComp .nextYear button[aria-disabled=true]:after, .calendarComp .nextYear button:disabled:after, .calendarComp .prevYear button[aria-disabled=true]:after, .calendarComp .prevYear button:disabled:after, .calendarComp .prevMonth button[aria-disabled=true]:after, .calendarComp .prevMonth button:disabled:after, .calendarComp .nextMonth button[aria-disabled=true]:after, .calendarComp .nextMonth button:disabled:after {
+  color: #F7E5E6
+
+}
+.calendarComp .nextYear button:after {
+  content: '\BB'
+
+}
+.calendarComp .prevYear button:after {
+  content: '\AB'
+
+}
+.calendarComp .prevMonth button:after {
+  content: '\2039'
+
+}
+.calendarComp .nextMonth button:after {
+  content: '\203A'
+
+}
+.calendarComp button.dayButton {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  min-width: 42px;
+  min-height: 42px;
+  background: #fff;
+  border: 1px solid #fff;
+  color: #333;
+  cursor: pointer;
+  display: block
+
+}
+.calendarComp button.dayButton:hover {
+  background: #EDEDED;
+  border-color: #EDEDED
+
+}
+.calendarComp button.dayButton.otherMonth {
+  /*color: #7C7C7C;*/
+
+}
+.calendarComp button.dayButton:disabled {
+  color: #7C7C7C;
+  cursor: default;
+  cursor: not-allowed
+
+}
+.calendarComp button.dayButton:disabled:hover {
+  background: #fff;
+  border-color: #fff
+
+}
+.calendarComp button.dayButton[aria-disabled = true] {
+  cursor: default;
+  cursor: not-allowed;
+  opacity: .5
+
+}
+.calendarComp button.dayButton[aria-disabled = true][aria-pressed = true] {
+  opacity: 1
+
+}
+.calendarComp button.dayButton[aria-disabled = true][aria-pressed = true]:hover, .calendarComp button.dayButton[aria-disabled = true][aria-pressed = true]:focus {
+  opacity: .5
+
+}
+.calendarComp button.dayButton.tempSelected {
+  background: #008580;
+  border-color: #008580;
+  color: #fff
+
+}
+.calendarComp button.dayButton.tempSelected.today {
+  border-color: #008580
+
+}
+.calendarComp button.dayButton.tempSelected:hover, .calendarComp button.dayButton.tempSelected:focus {
+  background: #005E59;
+  border-color: #005E59
+
+}
+.calendarComp button.dayButton.tempSelected:hover.today, .calendarComp button.dayButton.tempSelected:focus.today {
+  border-color: #005E59
+
+}
+.calendarComp button.dayButton.startRange {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px
+
+}
+.calendarComp button.dayButton.endRange {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px
+
+}
+.calendarComp button.dayButton.inRange {
+  background: #E6F3F2;
+  border-color: #E6F3F2
+
+}
+.calendarComp button.dayButton.inRange:hover {
+  background: #B3DAD9;
+  border-color: #B3DAD9
+
+}
+.calendarComp button.dayButton:focus {
+  outline: 2px solid  #efbd5b
+
+}
+.calendarComp button.dayButton.today, .calendarComp button.dayButton.inRange.today {
+  border-color: #959ea9
+
+}
