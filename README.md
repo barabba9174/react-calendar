@@ -27,7 +27,7 @@
 * **labels**: label for accessibility *(object [2])*  
 
 
-## CallBack Object [1]
+## CallBack object [1]
 ```
 {
   "selected": [
