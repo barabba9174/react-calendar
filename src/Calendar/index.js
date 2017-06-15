@@ -6,7 +6,8 @@ import {sortSelected} from './utils/checkInRange';
 import setOutputObject from './utils/setOutputObject';
 import MonthsNav from './MonthsNav';
 import DaysContainer from './DaysContainer';
-import WeekLine from './WeekLine';
+import WeekRow from './WeekRow';
+
 import './calendar.css';
 
 export default class Calendar extends Component {
@@ -133,7 +134,7 @@ export default class Calendar extends Component {
                           year={year}
                           labels={labels}
                         />
-                        <WeekLine weekDays={weekDays} />
+                        <WeekRow weekDays={weekDays} />
                     </thead>
                     <DaysContainer
                       calendarDays={calendarDays}

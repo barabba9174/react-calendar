@@ -1,8 +1,8 @@
 import React, {PropTypes} from 'react';
-import Lines from './Lines';
+import DayRow from './DayRow';
 
 const DaysContainer = ({onHover, focusedElement, onReset, onArrowNavigation, onSelect, calendarDays}) => {
-    const getDaysLine = (value, key) => (<Lines
+    const getDaysLine = (value, key) => (<DayRow
       onHover={onHover}
       focusedElement={focusedElement}
       key={key}

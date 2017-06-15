@@ -81,5 +81,4 @@ const getMonth = ({
     return visibleMonth;
 };
 
-
 export default getMonth;

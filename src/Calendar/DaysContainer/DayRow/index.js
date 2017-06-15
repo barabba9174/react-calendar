@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import Day from './Day';
 
-const Lines = ({days, onSelect, onArrowNavigation, focusedElement, onHover, onReset}) => {
+const DayRow = ({days, onSelect, onArrowNavigation, focusedElement, onHover, onReset}) => {
     const daysComp = days.map((el, i) => (<Day
       onHover={onHover}
       focusedElement={focusedElement}
@@ -15,7 +15,7 @@ const Lines = ({days, onSelect, onArrowNavigation, focusedElement, onHover, onRe
         <tr>{daysComp}</tr>
     );
 };
-Lines.propTypes = {
+DayRow.propTypes = {
     days: PropTypes.arrayOf(PropTypes.shape({})),
     onSelect: PropTypes.func,
     onArrowNavigation: PropTypes.func,
@@ -24,4 +24,4 @@ Lines.propTypes = {
     onReset: PropTypes.func
 };
 
-export default Lines;
+export default DayRow;

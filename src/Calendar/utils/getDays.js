@@ -1,6 +1,6 @@
-import checkDayInRange, {checkIsMax} from './checkInRange';
 import setKeyArrowsNavigation from './setKeyArrowsNavigation';
-import {getFormattedDate, getDiff} from './momentUtils';
+import {getFormattedDate} from './momentUtils';
+import checkDayIfDisable from './checkDayIfDisable';
 import getStyle from './getStyle';
 
 const getDays = ({
@@ -21,29 +21,17 @@ const getDays = ({
 }) => {
     const isPrev = date.getMonth() < month;
     const isNext = date.getMonth() > month;
-    const disabled = !checkDayInRange({date, minDate, maxDate});
-    let setHover = null;
-    let disableDay = false;
-    if (type === 'range' && selectedDates.length === 1) {
-        const checkMinRange = (minRange) ? Math.abs(getDiff(date, selectedDates[0], 'days')) < Number(minRange) : false;
-        const checkMaxRange = (maxRange) ? Math.abs(getDiff(date, selectedDates[0], 'days')) > Number(maxRange) : false;
-        disableDay = checkMinRange || checkMaxRange;
-        const closestLimit = (!checkIsMax({date, maxDate})) ? maxDate : minDate;
-        setHover = (!disabled) ? date : new Date(closestLimit);
-    }
+    const {hoverDate, disableDay, disabled} = checkDayIfDisable({type, selectedDates, minRange, maxRange, date, maxDate, minDate, disable});
 
-    if (disable) {
-        disableDay = disableDay || disable(date);
-    }
     const thisDay = {
         date: (!lineNumbers && (isPrev || isNext)) ? null : date,
         isSelected: selectedDates.includes(date.getTime()),
         classes: getStyle(date, isPrev, isNext, tempSelected, type),
         isThisMonth: !isPrev && !isNext,
-        disabled,
         label: getFormattedDate(date, 'D, dddd MMMM YYYY'),
         keyArrowsNav: setKeyArrowsNavigation({date, daysOnTheWeek, minDate, maxDate, firstDayOfTheWeek}),
-        hoverDate: setHover,
+        disabled,
+        hoverDate,
         disableDay
     };
     return (!lineNumbers && (thisDay.isPrev || thisDay.isNext)) ? {} : thisDay;

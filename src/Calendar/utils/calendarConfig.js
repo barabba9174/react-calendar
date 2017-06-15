@@ -1,6 +1,12 @@
 import {goToNextMonth, getMonthDays, startOf, setDate, endOf} from './momentUtils';
 import checkDayInRange from './checkInRange';
 
+/**
+ * overwrite the default props-state with the focusElement month and year
+ set the minumum date to the time 0:00:00
+ set the maximum date to the time  23:59:59
+ */
+
 const calendarConfig = props => ({
     ...props,
     month: props.focusedElement ? props.focusedElement.getMonth() : props.currentMonth,
