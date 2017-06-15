@@ -9,24 +9,24 @@
 
 ## Parameters (all the parameters are optional)
 
-selectedDates: default selected dates (array of numbers, of strings or date objects)________
-minDate: minumum date for starting the calendar (number, string or date object)______
-maxDate: maximum date for ending the calendar (number, string or date object)____
-type: string, type of picking, the default is normal, if it is "range" the datepicker becames a range datepicker__
-defaultFocus: default day focus (if it is not in mimunim-maximum range the default is the first date of selectedDates or the minumum date)__
-callBack: function for receiving back the selected values (function, argument object)__
-hideYears: if it is true, the year navigation arrows are hidden (boolean)__
-lineNumbers: if it is setted it changes default rows number of the timepicker, otherwise it's automatic (number)__
-locale: locale for the calendar (as moment.js) (string)__
-monthFormat: format for the month (as moment.js)  (string)__
-weekFormat: format for the week days (as moment.js)  (string)__
-longFormat: format for long result (as moment.js)  (string)__
-shortFormat: format for short result (as moment.js)  (string)__
-rangeSeparator: format for the range separator result (string)__
-minRange: minumum allowed range (number)__
-maxRange: maximum allowed range (number)__
-disable: function for disabling the date (function, argument date)__
-labels: label for accessibility (object)__
+selectedDates: default selected dates (array of numbers, of strings or date objects)        
+minDate: minumum date for starting the calendar (number, string or date object)      
+maxDate: maximum date for ending the calendar (number, string or date object)    
+type: string, type of picking, the default is normal, if it is "range" the datepicker becames a range datepicker  
+defaultFocus: default day focus (if it is not in mimunim-maximum range the default is the first date of selectedDates or the minumum date)  
+callBack: function for receiving back the selected values (function, argument object)  
+hideYears: if it is true, the year navigation arrows are hidden (boolean)  
+lineNumbers: if it is setted it changes default rows number of the timepicker, otherwise it's automatic (number)  
+locale: locale for the calendar (as moment.js) (string)  
+monthFormat: format for the month (as moment.js)  (string)  
+weekFormat: format for the week days (as moment.js)  (string)  
+longFormat: format for long result (as moment.js)  (string)  
+shortFormat: format for short result (as moment.js)  (string)  
+rangeSeparator: format for the range separator result (string)  
+minRange: minumum allowed range (number)  
+maxRange: maximum allowed range (number)  
+disable: function for disabling the date (function, argument date)  
+labels: label for accessibility (object)  
 
 
 ## callBack Object
@@ -63,10 +63,10 @@ labels: label for accessibility (object)__
 }
 
 ## keyboard navigation features
-Press the arrow keys to navigate by day,__
-PageUp and PageDown to navigate by month,__
-Alt+PageUp and Alt+PageDown to navigate by year,__
-Home and End to jump to the beginning or end of the current week,__
+Press the arrow keys to navigate by day,  
+PageUp and PageDown to navigate by month,  
+Alt+PageUp and Alt+PageDown to navigate by year,  
+Home and End to jump to the beginning or end of the current week,  
 Escape to cancel
 
 
