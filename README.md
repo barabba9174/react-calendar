@@ -1,6 +1,4 @@
-# React Calendar component with ES2015
-
-
+# Accessible React Datepicker Component
 
 ## Usage
 
