@@ -14,7 +14,7 @@
 * **maxDate**: maximum date for ending the calendar *(number, string or date object)*    
 * **type**: it transforms the datepicker in a dates range datepicker use null or 'range' *(string)*
 * **defaultFocus**: default day focus *(date object)*  
-* **callBack**: function for receiving back the selected values *(function - argument object)*  
+* **callBack**: function for receiving back the selected values *(function - argument object [1])*  
 * **hideYears**: if it is true, the year navigation arrows are hidden *(boolean)*  
 * **lineNumbers**: if it is setted it changes default rows number of the timepicker, otherwise it's automatic *(number)*  
 * **locale**: locale for the calendar (as moment.js) *(string)*  
@@ -26,10 +26,10 @@
 * **minRange**: minumum allowed range *(number)*  
 * **maxRange**: maximum allowed range *(number)*  
 * **disable**: function for disabling the date *(function - argument date)*  
-* **labels**: label for accessibility *(object)*  
+* **labels**: label for accessibility *(object [2])*  
 
 
-## CallBack Object
+## CallBack Object [1]
 ```
 {
   "selected": [
@@ -52,7 +52,7 @@
   }
 }
 ```
-## Labels for accessibility object
+## Labels for accessibility object [2]
 ```
 {
   "title": "Datepicker",
